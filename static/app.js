@@ -1,4 +1,4 @@
-// static/app.js — robust binding, defensive checks, and clear console logs
+// docs/app.js — robust binding, defensive checks, and clear console logs
 (function () {
   const $ = id => document.getElementById(id);
   const pretty = obj => JSON.stringify(obj, null, 2);

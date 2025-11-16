@@ -35,7 +35,7 @@ MAX_CONTENT_BYTES = 10 * 1024 * 1024  # 10 MB
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # ---------- APP & DB ----------
-app = Flask(__name__, static_folder='static', static_url_path='')
+app = Flask(__name__, static_folder='docs', static_url_path='')
 CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_BYTES
