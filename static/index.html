@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OPENFORCE — ETL Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <h1>OPENFORCE</h1>
+    <p class="subtitle">Intelligent Ingestion & Schema Evolution Tracker</p>
+
+    <section class="card" id="input-section">
+      <center>
+        <div class="form-group">
+          <label for="file-input" id="upload"><b>UPLOAD FILE</b></label>
+          <div class="file-upload-wrapper">
+            <input type="file" id="file-input" name="file" accept=".txt,.md,.json,.html,.pdf,.csv" />
+            <label for="file-input" class="file-input-label">
+              <span id="browse">Browse Files</span>
+            </label>
+            <span id="file-name" class="file-name">No file selected</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <button id="submit-button">Upload</button>
+          <button id="view-schema-diff" style="margin-left:12px;">Show Schema Diff</button>
+          <button id="show-records-btn" style="margin-left:12px;">Show Records</button>
+        </div>
+
+        <p id="status-message" class="status-message"></p>
+      </center>
+    </section>
+
+    <section class="display-container">
+      <div class="card" id="schema-panel">
+        <h2>SCHEMA HISTORY</h2>
+        <pre id="schema-display">Loading schema history...</pre>
+
+        <h2 style="margin-top:20px;">LATEST DIFF</h2>
+        <pre id="schema-diff-display">Click "Show Schema Diff" to view.</pre>
+      </div>
+
+      <div class="card" id="data-panel">
+        <h2>UPLOADED DATA</h2>
+        <pre id="data-display">Waiting for uploads...</pre>
+
+        <h2 style="margin-top:20px;">RECORDS (from MongoDB)</h2>
+        <pre id="records-display">Click "Show Records" to view saved ingested data.</pre>
+      </div>
+    </section>
+  </main>
+
+  <script>const API_URL = '';</script>
+  <script src="app.js"></script>
+</body>
+</html>
